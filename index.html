@@ -10,6 +10,7 @@
 
 <body>
     <h1 id="title1">Evento Tecnológico</h1>
+    <p id="day">Fecha: </p>
     <button onclick="handShake()">Pulsa para ser saludado</button>
     <section>
         <p id="info">Exercitation exercitation incididunt adipisicing labore reprehenderit duis cupidatat exercitation fugiat velit ea. <br>
@@ -25,6 +26,16 @@
     <input type="text" id="message">
     <button onclick="addMessage()">Añadir mensaje</button>
     <div id="message-area"></div>
+
+    <section>
+        <h3>Información del navegador</h3>
+        <p id="window-size"></p>
+        <p id="browser-language"></p>
+        <p id="user-agent"></p>
+        <p id="connection-status"></p>
+        <button type="button" onclick="confirmLeave()">Abandonar página</button>
+        <p id="leave-status" aria-live="polite"></p>
+    </section>
     
     <script src="script.js"></script>
 </body>
