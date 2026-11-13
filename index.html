@@ -6,12 +6,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evento Tecnológico</title>
+    <style>
+        body {
+            background-color: #fff;
+            color: #222;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        body[data-theme="dark"] {
+            background-color: #1e1e1e;
+            color: #f2f2f2;
+        }
+
+        body[data-theme="dark"] button,
+        body[data-theme="dark"] input {
+            background-color: #333;
+            color: #f2f2f2;
+            border: 1px solid #888;
+        }
+    </style>
 </head>
 
 <body>
     <h1 id="title1">Evento Tecnológico</h1>
-    <p id="day">Fecha: </p>
     <button onclick="handShake()">Pulsa para ser saludado</button>
+    <section aria-labelledby="event-window-heading">
+        <h2 id="event-window-heading">Detalles del evento</h2>
+        <button type="button" id="open-event-window">Abrir detalles en una nueva ventana</button>
+        <p id="window-message" aria-live="polite"></p>
+    </section>
+    <section aria-labelledby="preferences-heading">
+        <h2 id="preferences-heading">Preferencias</h2>
+        <button type="button" id="toggle-theme">Activar modo oscuro</button>
+        <button type="button" id="clear-theme">Borrar preferencia de visualización</button>
+    </section>
+    <section aria-labelledby="name-heading">
+        <h2 id="name-heading">Nombre de usuario</h2>
+        <label for="user-name">Escribe tu nombre:</label>
+        <input type="text" id="user-name">
+        <button type="button" id="save-name">Guardar nombre</button>
+        <button type="button" id="clear-name">Eliminar nombre de la sesión</button>
+        <p id="saved-name" aria-live="polite"></p>
+        <p id="name-status" aria-live="polite"></p>
+    </section>
+    <p id="day">Fecha: </p>
+    
     <section>
         <p id="info">Exercitation exercitation incididunt adipisicing labore reprehenderit duis cupidatat exercitation fugiat velit ea. <br>
             Officia deserunt id consequat consectetur. <br>
